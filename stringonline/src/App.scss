@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-color: #141414;
+}
+nav {
+  list-style-type: none;
+  background-color:#0A1D1C;
+  width: 200px;
+  font-family: 'Trebuchet MS';
+  
+  }
+  ul {
+  
+    a{
+    
+      color: #00f9b6;
+      padding: 16px 16px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    a:Hover{
+      background-color: rgb(197, 195, 195);
+    }
+    }
+  }
