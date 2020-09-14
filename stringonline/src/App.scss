@@ -6,12 +6,13 @@
 
 body{
   background-color: #141414;
+  font-family: 'Titillium Web', sans-serif;
 }
 nav {
   list-style-type: none;
   background-color:#0A1D1C;
   width: 200px;
-  font-family: 'Trebuchet MS';
+  color: #00f9b6;
   
   }
   ul {
@@ -27,4 +28,19 @@ nav {
       background-color: rgb(197, 195, 195);
     }
     }
-  }
+
+
+.DropContent{
+  display: none;
+}
+.DropContent a{
+
+  text-decoration: none;
+  display: block;
+}
+
+.DropDown:Hover .DropContent{
+  display: block;
+}
+
+}
