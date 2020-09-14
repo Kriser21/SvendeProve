@@ -91,14 +91,29 @@ header{
     a{
       color: black;
     }
-
-
-
-
   }
-  
 }
 
 .Sog{
   display: inline-block;
 }
+
+.hero-header{
+width: 1310px;
+  img{
+  width: 100%;
+  height: 490px;
+  
+}}
+.Tekst{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: repeat(auto);
+
+button{
+  background-color:#D10361;
+  color: white;
+  border: none;
+}
+}
+
