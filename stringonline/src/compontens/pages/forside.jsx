@@ -3,9 +3,9 @@ import Img from '../img/Gutiarer.png';
 
 
 
-
 const Fetch = () =>{
     const [apiData, setApiData]= useState (null);
+    const [apple, setAppel] = useState ([]);
     useEffect(() => {
     if (!apiData){
     
@@ -23,10 +23,16 @@ const Fetch = () =>{
     
     console.log(apiData && apiData);
     
+    const avv = (produkter) => {
+        setAppel(apple.concat(produkter));
+    }
+
+    console.log(apple);
+
     let home =
     apiData&&
         apiData.productgroups.items[0].subgroups[0].products.slice(0, 4).map((produkter) =>{
-            console.log (produkter);
+            // console.log (produkter);
             return(
                 <div key={produkter.id}>
                     <img className="IMG" src={produkter.image_fullpath} alt=""/> <br/>
@@ -34,7 +40,13 @@ const Fetch = () =>{
                   <p>{produkter.description_short}</p> 
                   <p>
                    <span>{produkter.price}</span> 
-                    <button >Læg i kurv</button>
+                    <button 
+                    onClick={() => {
+                    avv(produkter);
+                
+                    }}>
+                        
+                    Læg i kurv </button>
                     </p>
                 </div>
              );
