@@ -95,6 +95,7 @@ export default function ReactForm() {
   
   return (
     <section>
+        <h2><b> Login </b> </h2> 
         {/* spørg om  isToken er true. Hvis ja viser den at du er log ind og en kanp til at kog ude */}
       {isToken ? (
         <>
@@ -114,11 +115,11 @@ export default function ReactForm() {
           </button>
         </>
       ) : (
-        <>
-
+        <div className="login-fecth">
+        <p>Indtast brugernavn og adgangskode for at logge på</p> <br/>
           <form onSubmit={handleSubmit(onSubmit)}>
             <ShowError />
-            <label htmlFor="username">User name:</label> <br />
+            <label htmlFor="username">Brugernavn:</label> <br />
             <input
               type="text"
               placeholder="user name"
@@ -127,11 +128,11 @@ export default function ReactForm() {
                 required: 'User name is required',
               })}
             />
-            <br />
+            
             {/* vise brugen ikke  skriven noegt så køre den en fejle meddeslse  */}
             {errors.username && <span> {errors.username.message} </span>}
             <br />
-            <label htmlFor="password">Password:</label> <br />
+            <label htmlFor="password">Adgangskode:</label> <br />
             <input
               type="password"
               placeholder="password"
@@ -140,14 +141,14 @@ export default function ReactForm() {
                 required: 'password is required',
               })}
             />
-            <br />
+            
              {/* vise brugen ikke  skriven noegt så køre den en fejle meddeslse  */}
             {errors.password && <span> {errors.password.message} </span>}
             <br />
-            <input type="submit" value="Log ind" />
+            <input type="submit" value="Login" className="knap-knap" />
         
           </form>
-        </>
+        </div>
       )}
     </section>
   );
