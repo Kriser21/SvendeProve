@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Img from '../img/Gutiarer.png';
+import { KurvTilføj } from '../contexts/avv';
 
 
 
 const Fetch = () =>{
     const [apiData, setApiData]= useState (null);
-    const [apple, setAppel] = useState ([]);
+   const { apple, setAppel } = useContext (KurvTilføj);
     useEffect(() => {
     if (!apiData){
     

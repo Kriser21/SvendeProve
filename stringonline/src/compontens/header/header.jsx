@@ -8,6 +8,7 @@ import Elektriske from '../pages/Elektriske';
 import Akustiske from '../pages/Akustiske';
 import Billede from '../img/header-bg.png';
 import Kurv from '../pages/kurv'
+import Kasse from '../pages/Kasse';
 
 export default function Header() {
     const { register, handleSubmit, errors } = useForm();
@@ -126,6 +127,7 @@ useEffect(() => {
       <Route path="/Akustiske" exact component={Akustiske} />
       <Route path="/Elektriske" exact component={Elektriske} />
       <Route path="/Kurv" exact component={Kurv} />
+      <Route path="/Kasse" exact component={Kasse} />
     </Router>
     )
 }
