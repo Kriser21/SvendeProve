@@ -32,8 +32,10 @@ const Fetch = () =>{
                     <img className="IMG" src={produkter.image_fullpath} alt=""/> <br/>
                        <h4>{produkter.name}</h4> 
                   <p>{produkter.description_short}</p> 
-                   <span>{produkter.price}</span> <br/>
+                  <p>
+                   <span>{produkter.price}</span> 
                     <button >Læg i kurv</button>
+                    </p>
                 </div>
              );
         });
