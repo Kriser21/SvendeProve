@@ -95,12 +95,13 @@ export default function ReactForm() {
   
   return (
     <section>
-        <h2><b> Login </b> </h2> 
+        <h2 className="login3">Login </h2> 
         {/* spørg om  isToken er true. Hvis ja viser den at du er log ind og en kanp til at kog ude */}
       {isToken ? (
-        <>
-          <p>du er logget in</p>
-          <button
+        <div className="logud">
+        <p>du er login</p>
+        
+          <button className="logud-knap"
             onClick={() => {
               setApiData('');
               setAuth(false);
@@ -113,7 +114,7 @@ export default function ReactForm() {
           >
             log out
           </button>
-        </>
+        </div>
       ) : (
         <div className="login-fecth">
         <p>Indtast brugernavn og adgangskode for at logge på</p> <br/>

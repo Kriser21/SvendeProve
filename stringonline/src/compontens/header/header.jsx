@@ -7,6 +7,7 @@ import Login from '../pages/login';
 import Elektriske from '../pages/Elektriske';
 import Akustiske from '../pages/Akustiske';
 import Billede from '../img/header-bg.png';
+import Kurv from '../pages/kurv'
 
 export default function Header() {
     const { register, handleSubmit, errors } = useForm();
@@ -56,19 +57,27 @@ useEffect(() => {
             </li>
        
           </ul>
-   </div>
+   </div> 
 
-   <form onSubmit={handleSubmit(onSubmit)} className="Sog">
+
+<div className="Sog">
+<span><i class="fas fa-envelope">  SALES@STRINGSONLINE.COM</i> </span>
+<span><i class="fas fa-phone-alt">  +45 98 12 22 68</i></span>
+<Link to="/Kurv"><i class="fas fa-shopping-basket"></i></Link>
+   <form onSubmit={handleSubmit(onSubmit)} >
        
         <input
           type="text"
-          placeholder="sertch"
+          placeholder="søg"
           name="sertch"
           ref={register}
         />
         
-        <input type="submit" />
+        <button type="submit">
+        <i class="fas fa-arrow-right"></i>
+        </button>
       </form>
+</div>
       </header>
 
       <nav>
@@ -84,8 +93,28 @@ useEffect(() => {
             <li className="list-inline-item">
               <Link to="Basser">Basser</Link>
             </li>
-  
+
+            <li className="list-inline-item">
+              <Link to="Handmade">Handmade</Link>
+            </li>
        
+            <li className="list-inline-item">
+              <Link to="Keyboards">Keyboards</Link>
+            </li>
+           
+            <li className="list-inline-item">
+              <Link to="Trommer">Trommer</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="Percussion">Percussion</Link>
+            </li>
+            <li className="list-inline-item">
+              <Link to="StrygBlæs">Stryg & Blæs</Link>
+            </li>
+             <li className="list-inline-item">
+              <Link to="Brands">Brands</Link>
+            </li>
+
           </ul>
         </nav>
       {/* Route bruges til at skifte urlen  */}
@@ -94,9 +123,9 @@ useEffect(() => {
       <Route path="/" exact component={Forside} />
       <Route path="/SalgsOgHandelbetingelser" component={SalgsOgHandelbetingelser} />
       <Route path="/login"  component={Login} />
-      <Route path="Akustiske" exact component={Akustiske} />
-      <Route path="Elektriske" exact component={Elektriske} />
-      
+      <Route path="/Akustiske" exact component={Akustiske} />
+      <Route path="/Elektriske" exact component={Elektriske} />
+      <Route path="/Kurv" exact component={Kurv} />
     </Router>
     )
 }
