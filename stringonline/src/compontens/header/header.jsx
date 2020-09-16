@@ -9,6 +9,8 @@ import Akustiske from '../pages/Akustiske';
 import Billede from '../img/header-bg.png';
 import Kurv from '../pages/kurv'
 import Kasse from '../pages/Kasse';
+import Ordrebekræftelse from '../pages/Ordrebekræftelse';
+
 
 export default function Header() {
     const { register, handleSubmit, errors } = useForm();
@@ -128,6 +130,7 @@ useEffect(() => {
       <Route path="/Elektriske" exact component={Elektriske} />
       <Route path="/Kurv" exact component={Kurv} />
       <Route path="/Kasse" exact component={Kasse} />
+      <Route path="/Ordrebekræftelse" exact component={Ordrebekræftelse} />
     </Router>
     )
 }

@@ -34,7 +34,8 @@ console.log('submit', data);
                </>
             ) : (
                 <>
-                         <span className="tilmeld">
+<span className="tilmeld">
+
 <h1>Kasse</h1> <br/>
    <p>Fakturerings- & leveringsadresse</p>
 </span> <br/>
@@ -95,7 +96,7 @@ message: 'no number'
 <br />
 {errors.City && <span> {errors.City.message} </span>}
 <br />
-<input type="checkbox" name="Kreditkort (MasterCard, VISA" id="Boks"/> 
+<input type="checkbox" name="Kreditkort (MasterCard, VISA" className="boks-tjek"/> 
 <label htmlFor="Checboks">Anden leveringsadresse</label>
 
 </span>
@@ -136,52 +137,39 @@ required: 'Telephone  is required'
 <p>Betalingsmetode</p>
 
 <div class="row">
-  <div class="col-75">
-    <div class="container">
 
-      
-     
-
-          <div class="col-50">
-          
-           
-            <div class="icon-container">
-                <input type="checkbox" name="Kreditkort (MasterCard, VISA" id="Boks"/>
+         
+           <span class="icon-container">
+          <input type="checkbox" name="Kreditkort (MasterCard, VISA" className="Boks"/>
+                <label htmlFor="Checboks">Bankoverførsel</label> <br/>
+                <input type="checkbox" name="Kreditkort (MasterCard, VISA" className="Tjek"/>
                 <label htmlFor="Checboks">Kreditkort (MasterCard, VISA)</label>
             <i class="fab fa-cc-visa"></i>
             <i class="fab fa-cc-mastercard"></i>
 
-            </div>
+            </span> <br/>
           
          
-            <input type="text" id="ccnum" name="cardnumber" placeholder="Kortnummer"/>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="Kortnummer"/> <br/>
           
+
+        <span className="tjek">
             <input type="text" id="expmonth" name="expmonth" placeholder="Måned"/>
-            <div class="row">
-              <div class="col-50">
-               
-                <input type="text" id="expyear" name="expyear" placeholder="År"/>
-
-              </div>
-              <div class="col-50">
+            <input type="text" id="expyear" name="expyear" placeholder="År"/>
+        </span> <br/>
+           
             
-                <input type="text" id="cvv" name="cvv" placeholder="CVV"/>
+            <input type="text" id="cvv" name="cvv" placeholder="CVV"/> <br/>
                  
-              </div>
-            
-            	<input type="text" id="cname" name="cardname" placeholder="Kort indehaver"/>
+             
+            <input type="text" id="cname" name="cardname" placeholder="Kort indehaver"/> <br/>
               
-            </div>
-          </div>
-      
-      
+         
 
-    </div>
-  </div>
 
-</div>
+        </div> <br/> 
 
-<Link to="/#"> <button className="TAl">BETAL</button> </Link> <br/><br/>
+<Link to="/Ordrebekræftelse"> <button className="TAl">BETAL</button> </Link> <br/><br/>
 
 </span>
 
