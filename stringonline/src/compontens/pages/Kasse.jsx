@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
 import { useForm} from "react-hook-form";
 
@@ -35,9 +35,9 @@ console.log('submit', data);
             ) : (
                 <>
                          <span className="tilmeld">
-<h2>Kasse</h2>
+<h1>Kasse</h1> <br/>
    <p>Fakturerings- & leveringsadresse</p>
-</span>
+</span> <br/>
 <form className="form" onSubmit={handleSubmit(onSubmit)}>
 <span>
 <label htmlFor="firstname">Nave</label> <br/>
@@ -58,9 +58,6 @@ message: 'no number'
 }
 })}/> <br/> <br/>
 
-</span>
-
-<span>
 <label htmlFor="Address"> Gade/vej husnummer </label> <br />
 <input
 type="text"
@@ -137,7 +134,7 @@ required: 'Telephone  is required'
 <span>
 <p>Betalingsmetode</p>
 
-<input  type="submit" value="BETAL"/> <br/><br/>
+<Link to="/#"> <button className="TAl">BETAL</button> </Link> <br/><br/>
 
 </span>
 </form> 
