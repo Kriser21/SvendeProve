@@ -13,6 +13,7 @@ import Ordrebekræftelse from '../pages/Ordrebekræftelse';
 import Akai from '../pages/Akai';
 import Cort from '../pages/Cort';
 import Epiphone from '../pages/Epiphone'
+import Everdeen from '../pages/Everdeen'
 
 // 
 export default function Header() {
@@ -149,6 +150,8 @@ useEffect(() => {
       <Route path="/Akai" exact component={Akai}/>
       <Route path="/Cort" exact component={Cort}/>
       <Route path="/Epiphone" exact component={Epiphone}/>
+      <Route path="/Everdeen" exact component={Everdeen}/>
+     
     </Router>
     )
 }
