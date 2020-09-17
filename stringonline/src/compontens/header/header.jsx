@@ -114,8 +114,14 @@ useEffect(() => {
             <li className="list-inline-item">
               <Link to="StrygBlæs">Stryg & Blæs</Link>
             </li>
-             <li className="list-inline-item">
+             <li className="DropDown">
               <Link to="Brands">Brands</Link>
+              <div className="DropContent">
+                <Link to="Akai">Akai</Link>
+                <Link to="Cort ">Cort</Link>
+                <Link to="Epiphone">Epiphone</Link>
+                <Link to="Everdeen">Everdeen</Link>
+              </div>
             </li>
 
           </ul>

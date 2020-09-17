@@ -155,10 +155,23 @@ width: 1310px;
   height: 50px;
   
 }}
+
 .Tekst{
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: repeat(auto);
+
+button{
+  background-color:#D10361;
+  color: white;
+  border: none;
+}
+}
+
+.Banana{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
 
 button{
   background-color:#D10361;
