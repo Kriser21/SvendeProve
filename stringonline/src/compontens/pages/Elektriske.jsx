@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { KurvTilføj } from '../contexts/avv';
 
 
 const Fetch = () =>{
+const { apple, setAppel } = useContext (KurvTilføj);
 const [apiData, setApiData]= useState (null);
 useEffect(() => {
 if (!apiData){
@@ -19,23 +21,41 @@ redirect: 'follow',
 }
 });
 
-console.log(apiData && apiData);
+console.log(apple);
+
+const avv = (produkter) => {
+    setAppel(apple.concat(produkter));
+}
 
 let home =
 apiData&&
-    apiData.products.slice(0, 7).map((news) =>{
-        console.log (news);
+    apiData.products.slice(0, 7).map((El) =>{
+        console.log (El);
         return(
-            <div className="Banana">
-            <p>
-            <img src={news.image_fullpath} alt="" />
-            <span>{news.price}</span> 
-            <span>{news.name}</span>
-            <span>{news.description_short}</span>
-        <span>{news.stock}</span>
-        <span>{news.brand}</span>
-        <Link to="/"> <button>Læg i kurv</button></Link>
-            </p>
+            <div className="Kiwi">
+                <span>
+            <p>{El.brand}</p> 
+             <p>{El.name}</p>
+            <img src={El.image_fullpath} alt="" />
+            </span> 
+
+            <span> 
+            <p>{El.description_short}</p>
+            </span>
+
+
+            <span>
+            <p>{El.stock}</p>
+            <p>{El.price}</p>  
+            <button 
+                    onClick={() => {
+                    avv(El);
+                
+                    }}>
+                        
+                    Læg i kurv </button>
+                    
+          </span>  
             </div>
          );
     });

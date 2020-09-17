@@ -20,8 +20,9 @@ return(
     
     <p key={kurv.id}>
             <img src={kurv.image_fullpath} alt=""/>
-    <span>{kurv.nam}</span> 
+    <span>{kurv.name}</span> 
     <span>{kurv.price}</span> 
+<span>{kurv.description_short}</span>
 
     </p> 
 <hr/>

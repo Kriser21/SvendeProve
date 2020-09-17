@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { KurvTilføj } from '../contexts/avv';
 
 
 const Fetch = () =>{
+const { apple, setAppel } = useContext (KurvTilføj);
 const [apiData, setApiData]= useState (null);
 useEffect(() => {
 if (!apiData){
@@ -19,7 +21,11 @@ redirect: 'follow',
 }
 });
 
-console.log(apiData && apiData);
+console.log(apple);
+
+const avv = (produkter) => {
+    setAppel(apple.concat(produkter));
+}
 
 let home =
 apiData&&
@@ -27,15 +33,31 @@ apiData&&
         console.log (news);
         return(
             <div className="Banana">
-            <p>
+                <span>
+            <p>{news.brand}</p> 
+             <p>{news.name}</p>
             <img src={news.image_fullpath} alt="" />
-            <span>{news.price}</span> 
-            <span>{news.name}</span>
-            <span>{news.description_short}</span>
-        <span>{news.stock}</span>
-        <span>{news.brand}</span>
-        <Link to="/"> <button>Læg i kurv</button></Link>
-            </p>
+            </span>
+
+            <span>
+
+           
+            <p>{news.description_short}</p>
+            </span>
+
+
+            <span>
+            <p>{news.stock}</p>
+            <p>{news.price}</p>  
+            <button 
+                    onClick={() => {
+                    avv(news);
+                
+                    }}>
+                        
+                    Læg i kurv </button>
+                    
+          </span>  
             </div>
          );
     });

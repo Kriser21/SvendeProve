@@ -171,7 +171,19 @@ button{
 .Banana{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+justify-self: end;
 
+button{
+  background-color:#D10361;
+  color: white;
+  border: none;
+}
+}
+
+.Kiwi{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+justify-self: end;
 
 button{
   background-color:#D10361;
@@ -290,3 +302,4 @@ grid-template-rows:  repeat(1fr);
    
   }
 }
+

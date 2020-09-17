@@ -10,16 +10,19 @@ import Billede from '../img/header-bg.png';
 import Kurv from '../pages/kurv'
 import Kasse from '../pages/Kasse';
 import Ordrebekræftelse from '../pages/Ordrebekræftelse';
+import Akai from '../pages/Akai';
 
-
+// 
 export default function Header() {
-    const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const [serchtWord, setSerchtWord] = useState('');
   const [apiData, setApiData] = useState(null);
   const [auth, setAuth] = useState(false);
 
 useEffect(() => {
+   // vise den er true så må den godt køre 
     if (auth === true) {
+       //sprøg om api date er tomt 
       if (!apiData) {
         const fetchHeaders = new Headers();
         fetchHeaders.append('Accept', 'application/json');
@@ -40,9 +43,12 @@ useEffect(() => {
     setApiData('');
     setAuth(true);
   }
+
+
     return (
         <Router>
             <>
+            {/* Det er her er hcor jeg har min header */}
       <header>
              <img className="logo" src={Billede} alt=""/>
         <div className="header-links">
@@ -62,7 +68,7 @@ useEffect(() => {
           </ul>
    </div> 
 
-
+{/* Det her er mine i ikoner og text ved siden af de  */}
 <div className="Sog">
 <span><i class="fas fa-envelope">  SALES@STRINGSONLINE.COM</i> </span>
 <span><i class="fas fa-phone-alt">  +45 98 12 22 68</i></span>
@@ -126,8 +132,9 @@ useEffect(() => {
 
           </ul>
         </nav>
-      {/* Route bruges til at skifte urlen  */}
-      </>
+   
+      </>  
+       {/* Route bruges til at skifte urlen  */}
       
       <Route path="/" exact component={Forside} />
       <Route path="/SalgsOgHandelbetingelser" component={SalgsOgHandelbetingelser} />
@@ -137,6 +144,7 @@ useEffect(() => {
       <Route path="/Kurv" exact component={Kurv} />
       <Route path="/Kasse" exact component={Kasse} />
       <Route path="/Ordrebekræftelse" exact component={Ordrebekræftelse} />
+      <Route path="/Akai" exact component={Akai}/>
     </Router>
     )
 }
