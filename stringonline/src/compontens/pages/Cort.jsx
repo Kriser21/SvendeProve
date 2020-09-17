@@ -6,7 +6,7 @@ useEffect(() => {
 if (!apiData){
 
 
-fetch('https://api.mediehuset.net/stringsonline/brands/17', {
+fetch('https://api.mediehuset.net/stringsonline/brands/13', {
 method:'GET',
 redirect: 'follow',
 })
@@ -21,14 +21,14 @@ console.log(apiData && apiData);
 
 let home =
 apiData&&
-    apiData.item.products.slice(0, 3).map((news) =>{
-        console.log (news);
+    apiData.item.products.slice(0, 1).map((Cort) =>{
+        console.log (Cort);
         return(
             <p>
-            <img src={news.image_fullpath} alt="" />
+            <img src={Cort.image_fullpath} alt="" />
             <span>
-            <p>{news.name}</p>
-            <p>{news.price}</p>
+            <p>{Cort.name}</p>
+            <p>{Cort.price}</p>
           </span>
             </p>
          );
@@ -42,13 +42,13 @@ return ( <div className="Text">
 <p>{apiData && apiData.item.description}</p>
 <img src={apiData && apiData.item.image_fullpath} alt=""/>
 
-  {home}
+  {Cort}
    </div> 
     </div>
     );
 };
 
-export default function Home(){
+export default function Cort(){
     return(
         <section>
         

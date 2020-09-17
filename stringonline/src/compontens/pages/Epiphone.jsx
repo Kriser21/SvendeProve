@@ -6,7 +6,7 @@ useEffect(() => {
 if (!apiData){
 
 
-fetch('https://api.mediehuset.net/stringsonline/brands/17', {
+fetch('https://api.mediehuset.net/stringsonline/brands/3', {
 method:'GET',
 redirect: 'follow',
 })
@@ -21,7 +21,7 @@ console.log(apiData && apiData);
 
 let home =
 apiData&&
-    apiData.item.products.slice(0, 3).map((news) =>{
+    apiData.item.products.slice(0, 4).map((news) =>{
         console.log (news);
         return(
             <p>

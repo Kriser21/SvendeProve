@@ -11,6 +11,8 @@ import Kurv from '../pages/kurv'
 import Kasse from '../pages/Kasse';
 import Ordrebekræftelse from '../pages/Ordrebekræftelse';
 import Akai from '../pages/Akai';
+import Cort from '../pages/Cort';
+import Epiphone from '../pages/Epiphone'
 
 // 
 export default function Header() {
@@ -145,6 +147,8 @@ useEffect(() => {
       <Route path="/Kasse" exact component={Kasse} />
       <Route path="/Ordrebekræftelse" exact component={Ordrebekræftelse} />
       <Route path="/Akai" exact component={Akai}/>
+      <Route path="/Cort" exact component={Cort}/>
+      <Route path="/Epiphone" exact component={Epiphone}/>
     </Router>
     )
 }
