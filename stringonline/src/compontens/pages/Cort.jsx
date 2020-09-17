@@ -19,7 +19,7 @@ redirect: 'follow',
 
 console.log(apiData && apiData);
 
-let home =
+let Cort =
 apiData&&
     apiData.item.products.slice(0, 1).map((Cort) =>{
         console.log (Cort);

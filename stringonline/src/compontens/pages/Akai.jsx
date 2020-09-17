@@ -19,16 +19,16 @@ redirect: 'follow',
 
 console.log(apiData && apiData);
 
-let home =
+let Akai =
 apiData&&
-    apiData.item.products.slice(0, 3).map((news) =>{
-        console.log (news);
+    apiData.item.products.slice(0, 3).map((Akai) =>{
+        console.log (Akai);
         return(
             <p>
-            <img src={news.image_fullpath} alt="" />
+            <img src={Akai.image_fullpath} alt="" />
             <span>
-            <p>{news.name}</p>
-            <p>{news.price}</p>
+            <p>{Akai.name}</p>
+            <p>{Akai.price}</p>
           </span>
             </p>
          );
@@ -42,13 +42,13 @@ return ( <div className="Text">
 <p>{apiData && apiData.item.description}</p>
 <img src={apiData && apiData.item.image_fullpath} alt=""/>
 
-  {home}
+  {Akai}
    </div> 
     </div>
     );
 };
 
-export default function Home(){
+export default function Akai(){
     return(
         <section>
         
