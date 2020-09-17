@@ -257,3 +257,23 @@ grid-template-rows:  repeat(1fr);
 
 }
 
+.Ordrebekræftelse{
+  display: grid;
+  grid-template-columns: 1fr  ;
+  grid-template-rows: auto;
+  justify-self: center;
+  border: solid 0.1px #00f9b6;
+  background-color: #0A1D1C;
+  width: 300px;
+
+
+
+  button{
+    background-color: #00f9b6;
+    border: 0px ;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+   
+  }
+}
