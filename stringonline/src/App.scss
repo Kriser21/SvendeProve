@@ -352,3 +352,16 @@ img{
         background-color: white;
   }
 }
+
+
+@media screen and (max-widt: 1200px){
+
+.App{
+
+  grid-template-columns: 1fr  ;
+  grid-template-rows: 1fr;
+
+}
+
+
+}

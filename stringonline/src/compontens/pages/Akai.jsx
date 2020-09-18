@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+//fetch henter data og spytter ting ude på siden
 const Fetch = () =>{
 const [apiData, setApiData]= useState (null);
 useEffect(() => {
@@ -19,6 +20,7 @@ redirect: 'follow',
 
 console.log(apiData && apiData);
 
+// den er et varibal som vireker inde i specil coop 
 let Akai =
 apiData&&
     apiData.item.products.slice(0, 3).map((Akai) =>{
@@ -35,7 +37,7 @@ apiData&&
     });
 
 
-
+// den return min data 
 return ( <div className="Text"> 
    <div className="Home">
   <img className="img" src={apiData && apiData.item.image_fullpath} alt=""/>
