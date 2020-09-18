@@ -36,7 +36,7 @@ const Fetch = () =>{
             // console.log (produkter);
             return(
                 <div key={produkter.id}>
-                    <img className="IMG" src={produkter.image_fullpath} alt=""/> <br/>
+                    <img src={produkter.image_fullpath} alt=""/> <br/>
                        <h4>{produkter.name}</h4> 
                   <p>{produkter.description_short}</p> 
                   <p>
@@ -62,7 +62,7 @@ const Fetch = () =>{
     
     export default function Home(){
         return(
-            <section>
+            <section className="sight">
                 <div className="forside">
                     <img src={Img} alt=""/>
                     </div> 
