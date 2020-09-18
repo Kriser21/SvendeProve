@@ -24,13 +24,13 @@ apiData&&
     apiData.item.products.slice(0, 4).map((news) =>{
         console.log (news);
         return(
-            <p>
+            <div className="Pære">
             <img src={news.image_fullpath} alt="" />
             <span>
             <p>{news.name}</p>
             <p>{news.price}</p>
           </span>
-            </p>
+            </div>
          );
     });
 

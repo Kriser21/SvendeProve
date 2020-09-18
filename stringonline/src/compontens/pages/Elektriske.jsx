@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { KurvTilføj } from '../contexts/avv';
 
 
@@ -34,18 +33,18 @@ apiData&&
         return(
             <div className="Kiwi">
                 <span>
-            <p>{El.brand}</p> 
-             <p>{El.name}</p>
+        
             <img src={El.image_fullpath} alt="" />
             </span> 
 
             <span> 
+            <h2>{El.brand}</h2> 
+             <h4>{El.name}</h4>
             <p>{El.description_short}</p>
             </span>
 
 
-            <span>
-            <p>{El.stock}</p>
+            <span className="Fugt">
             <p>{El.price}</p>  
             <button 
                     onClick={() => {
@@ -54,7 +53,7 @@ apiData&&
                     }}>
                         
                     Læg i kurv </button>
-                    
+            <p>{El.stock}</p>
           </span>  
             </div>
          );

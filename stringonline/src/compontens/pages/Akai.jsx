@@ -24,13 +24,13 @@ apiData&&
     apiData.item.products.slice(0, 3).map((Akai) =>{
         console.log (Akai);
         return(
-            <p>
+            <div className="Pære">
             <img src={Akai.image_fullpath} alt="" />
             <span>
             <p>{Akai.name}</p>
             <p>{Akai.price}</p>
           </span>
-            </p>
+            </div>
          );
     });
 

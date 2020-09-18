@@ -34,14 +34,14 @@ apiData&&
         return(
             <div className="Banana">
                 <span>
-            <p>{news.brand}</p> 
-             <p>{news.name}</p>
+           
             <img src={news.image_fullpath} alt="" />
             </span>
 
             <span>
 
-           
+            <h2>{news.brand}</h2> 
+             <h4>{news.name}</h4>
             <p>{news.description_short}</p>
             </span>
 

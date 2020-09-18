@@ -171,12 +171,19 @@ button{
 .Banana{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-justify-self: end;
+  justify-self: end;
+  border: solid 1px #00f9b6;
 
 button{
   background-color:#D10361;
   color: white;
   border: none;
+}
+img{
+  height: 200px;
+  width: 400px;
+  padding: 20px;
+
 }
 }
 
@@ -184,12 +191,23 @@ button{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 justify-self: end;
+border: solid 1px #00f9b6;
 
 button{
   background-color:#D10361;
   color: white;
   border: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100px;
 }
+img{
+  height: 200px;
+  width: 400px;
+  padding: 20px;
+
+}
+
 }
 
 
@@ -303,3 +321,16 @@ grid-template-rows:  repeat(1fr);
   }
 }
 
+.Pære{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: auto;
+  // grid-row-gap: 1px
+
+img{
+  height: 100px;
+  width: 400px;
+  
+
+}
+}

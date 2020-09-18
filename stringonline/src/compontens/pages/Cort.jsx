@@ -24,13 +24,13 @@ apiData&&
     apiData.item.products.slice(0, 1).map((Cort) =>{
         console.log (Cort);
         return(
-            <p>
+            <div className="Pære">
             <img src={Cort.image_fullpath} alt="" />
             <span>
             <p>{Cort.name}</p>
             <p>{Cort.price}</p>
           </span>
-            </p>
+            </div>
          );
     });
 
