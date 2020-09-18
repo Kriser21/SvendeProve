@@ -38,9 +38,10 @@ apiData&&
 
 return ( <div className="Text"> 
    <div className="HomeHotel">
-<h2>{apiData && apiData.item.title}</h2>
-<p>{apiData && apiData.item.description}</p>
-<img src={apiData && apiData.item.image_fullpath} alt=""/>
+   <img className="img" src={apiData && apiData.item.image_fullpath} alt=""/>
+    <h2>{apiData && apiData.item.title}</h2>
+    <p>{apiData && apiData.item.description}</p>
+
 
   {Cort}
    </div> 

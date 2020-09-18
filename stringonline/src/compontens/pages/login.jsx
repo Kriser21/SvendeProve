@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 //import react hook form
-
 import { useForm } from 'react-hook-form';
+
+
 export default function ReactForm() {
   //indstiller the hook fra useForm
   const { register, handleSubmit, errors } = useForm();
@@ -17,7 +18,7 @@ export default function ReactForm() {
   //den spørg om torken er underfiend og visen den er undefinde så fjern den token
   if (localStorage.getItem('token') === undefined) {
     localStorage.removeItem('token');
-    //viser der er en token så går den og spørg om om hook false så gå den viser og vise de true så gøre den ikke noget 
+    //viser der er en token så går den og spørg om  hook false så gå den vider og vise de true så gøre den ikke noget 
   } else if (localStorage.getItem('token')) {
     if (isLocalStorage === false) {
       setIsLocalStorage(true);
@@ -80,7 +81,7 @@ export default function ReactForm() {
           <></>
         )}
       </>
-    );
+    )
   };
 
   //når brugeren submiter resetter den alt og søger for den kan køre
@@ -97,7 +98,7 @@ export default function ReactForm() {
   return (
     <section>
         <h2 className="login3">Login </h2> 
-        {/* spørg om  isToken er true. Hvis ja viser den at du er log ind og en kanp til at kog ude */}
+        {/* spørg om  isToken er true. Hvis ja viser den at du er log ind og en kanp til at log ude */}
       {isToken ? (
         <div className="logud">
         <p>du er login</p>

@@ -16,7 +16,7 @@ export default function Kurv() {
 
 return(
     <>
-    <hr/>
+ 
     
     <p key={kurv.id}>
             <img src={kurv.image_fullpath} alt=""/>
@@ -25,7 +25,7 @@ return(
 <span>{kurv.description_short}</span>
 
     </p> 
-<hr/>
+
     </>
 )
                 

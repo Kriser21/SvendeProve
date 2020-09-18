@@ -61,7 +61,7 @@ apiData&&
 
 
 
-return ( <div className="Text"> 
+return ( <div > 
    <div className="HomeHotel">{home}</div> 
     </div>
     );
